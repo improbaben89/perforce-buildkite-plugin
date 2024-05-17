@@ -17,6 +17,8 @@ def main():
 
     repo = P4Repo(**config)
 
+    print(repo.perforce.run_info())
+
     revision = get_build_revision()
     if revision is None:
         revision = repo.head()
